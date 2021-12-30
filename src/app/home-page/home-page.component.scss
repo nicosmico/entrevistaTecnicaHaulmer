@@ -1,0 +1,39 @@
+
+:host {
+    background-color: #efefef;
+}
+
+header {
+    background-color: #724cff;
+    padding: 50px 5px;
+
+    h1 {
+        text-align: center;
+        color: #ffffff;
+        font-size: 40px;
+    }
+}
+
+main {
+    padding: 10px 10%;
+}
+
+.article-card {
+    margin: 10px 0;
+
+    a:link {
+        color: #4c7fff;
+    }
+
+    a:visited {
+        color: #4c7fff;
+    }
+
+    a:active {
+        color: #724cff;
+    }
+
+    a {
+        text-decoration: none;
+    }
+}

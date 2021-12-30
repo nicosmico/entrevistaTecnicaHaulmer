@@ -1,0 +1,26 @@
+<header>
+    <h1>Mejores Historias de Hacker News</h1>
+</header>
+
+<main>
+    <mat-paginator 
+        [length]="500"
+        [pageSize]="50"
+        (page)="handlePageEvent($event)"
+        hidePageSize="true"
+        aria-label="Select page">
+    </mat-paginator>
+
+    <section class="best-stories-cards">
+        <mat-card class="article-card" *ngFor="let article of bestStories">
+            <a href="{{ article.url }}" *ngIf="article.type == 'story'">
+                <mat-card-title>{{ article.title }}</mat-card-title>
+            </a>
+            <mat-card-title *ngIf="article.type != 'story'">{{ article.title }}</mat-card-title>
+            <mat-card-content>
+              <p>Publicado por: {{ article.by }}</p>
+              <!-- <p>Tipo: {{ article.type }}</p> -->
+            </mat-card-content>
+        </mat-card>
+    </section>
+</main>
